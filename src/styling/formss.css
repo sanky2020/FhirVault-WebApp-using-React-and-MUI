@@ -1,0 +1,17 @@
+.container {
+  height: auto;
+  text-align: center;
+  background-color: #1a2b6d;
+  margin-top: 8rem;
+  color: #ffffff;
+}
+.container p:last-child {
+  padding-bottom: 2rem;
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+  .addressSection {
+    width: 80%;
+    flex-direction: column;
+  }
+}
