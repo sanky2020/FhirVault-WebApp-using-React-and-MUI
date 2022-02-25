@@ -14,7 +14,7 @@ function home() {
               <br /> & Services
             </h2>
             <div className={homeClass.insideChild}>
-              <div></div>
+              <p></p>
               <p className={homeClass.para}>
                 I'm a paragraph. Click here to add your own text and edit me.
                 click “Edit Text” or double click me to add your own content and
@@ -117,16 +117,19 @@ function home() {
       </section>
       <section>
         <div className={homeClass.moreParentDiv}>
-          <h2>Ready to find out more?</h2>
-          <div className={homeClass.insideChild}>
-            <div></div>
-            <p className={homeClass.para}>
-              I'm a paragraph. Click here to add your own text and edit me.
-              click “Edit Text” or double click me to add your own content and
-              make changes to the font. I’m a great place for you to tell a
-              story and let your users know a little more about you.
-            </p>
+          <div>
+            <h2>Ready to find out more?</h2>
+            <div className={homeClass.insideChild}>
+              <p></p>
+              <p className={homeClass.para}>
+                I'm a paragraph. Click here to add your own text and edit me.
+                click “Edit Text” or double click me to add your own content and
+                make changes to the font. I’m a great place for you to tell a
+                story and let your users know a little more about you.
+              </p>
+            </div>
           </div>
+
           <div className={homeClass.more}>
             <p>+</p>
             <p>Find out more</p>
