@@ -5,6 +5,10 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core";
 import "../styling/formss.css";
+// import { styled } from "@material-ui/core";
+
+// const StyledTextField = styled(TextField)``;
+// &.MuiOutlinedInput-notchedOutline{borderColor: 'white'}
 
 const validationSchema = yup.object({
   email: yup
@@ -18,17 +22,22 @@ const validationSchema = yup.object({
 });
 
 const useStyles = makeStyles({
-  form: {
-    width: "50%",
-    margin: "0 auto",
-  },
+  // root:{
+  //   '&$focused $notchedOutline':{
+  //     borderColor: 'white'
+  //   }
+  // },
+  // focused:{},
+  // notchedOutline:{},
+  // form: {
+  //   width: "50%",
+  //   margin: "0 auto",
+  // },
   textfield: {
     color:"#FFFFFF",
     maxWidth: 600,
     margin: "20px auto",
-    "&:hover": {
-      borderBottom: "1px solid white",
-    },
+    
   },
   address: {
     display: "flex",
@@ -64,17 +73,30 @@ const Formss = () => {
   const classes = useStyles();
   return (
     <div className="container" id="contactUs">
-      <h2 className={classes.contactHeader} style={{ padding: "1.5rem" }}>
+      <h2 >
         Contact Us
       </h2>
-      <form onSubmit={formik.handleSubmit} className={classes.form}>
+      <form onSubmit={formik.handleSubmit} className='form' noValidate>
         <TextField
           InputLabelProps={{
             style: {
               color: "white",
-              fontSize: "1.1rem",
+              fontSize: "1rem",
+              
             },
           }}
+          inputProps={{
+            style:{
+              color: 'white'
+            }
+          }}
+          // inputProps={{
+          //   classes:{
+          //     root: classes.root,
+          //     focused: classes.focused,
+          //     notchedOutline: classes.notchedOutline
+          //   }
+          // }}
           required
           variant="outlined"
           className={classes.textfield}
@@ -82,6 +104,7 @@ const Formss = () => {
           id="name"
           name="name"
           label="Enter Your Name"
+          // placeholder="Enter Your Name"
           type="name"
           value={formik.values.name}
           onChange={formik.handleChange}
@@ -94,6 +117,11 @@ const Formss = () => {
               color: "white",
               fontSize: "1.1rem",
             },
+          }}
+          inputProps={{
+            style:{
+              color: 'white'
+            }
           }}
           required
           className={classes.textfield}
@@ -114,6 +142,11 @@ const Formss = () => {
               color: "white",
               fontSize: "1.1rem",
             },
+          }}
+          inputProps={{
+            style:{
+              color: 'white'
+            }
           }}
           className={classes.textfield}
           label="Type Your Message Here..."
