@@ -5,13 +5,33 @@
   margin-top: 8rem;
   color: #ffffff;
 }
+.form{
+  width: 50%;
+    margin: 0 auto;
+    /* border: 1px solid white; */
+}
+.container h2{
+  font-size: 2rem;
+  padding: 2rem;
+}
 .container p:last-child {
   padding-bottom: 2rem;
   margin-bottom: 0;
 }
+/* .MuiOutlinedInput-notchedOutline{
+  border: 1px solid white;
+} */
+#name{
+  border-bottom-color: white;
+  
+}
 @media (max-width: 600px) {
   .addressSection {
-    width: 80%;
+    width: 90%;
     flex-direction: column;
+  }
+  .form{
+    width: 70%;
+    
   }
 }
