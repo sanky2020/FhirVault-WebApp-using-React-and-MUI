@@ -1,6 +1,9 @@
 HTML {
   scroll-behavior: smooth;
 }
+*{
+  box-sizing: border-box;
+}
 .landingPage {
   height: 88vh;
   background-image: url("https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
@@ -21,17 +24,23 @@ HTML {
   right: 5rem;
   top: -50%;
 }
-
+.itConsultingChild.itConsultingDescription{
+  padding: 1rem !important;
+  border: 1px solid red ;
+}
 .itConsultingChild h2 {
   font-size: 3rem;
   color: #1a2b6d;
   margin: 1rem;
 }
+.itConsultingChild div:first-child{
+  padding: 1rem;
+}
 .insideChild {
   display: flex;
   justify-content: space-evenly;
 }
-.insideChild div {
+.insideChild p:first-child {
   background-color: #1a2b6d;
   height: 5px;
   width: 8rem;
@@ -143,11 +152,14 @@ HTML {
   margin: 1rem auto;
   background-color: #f2f2f2;
 }
+.moreParentDiv div:first-child{
+  padding: 1rem;
+}
 .moreParentDiv h2 {
   font-size: 3rem;
   color: #1a2b6d;
   text-align: center;
-  padding-top: 1rem;
+  padding-left: 1rem;
   letter-spacing: 1.2px;
 }
 .ContactUs {
@@ -155,14 +167,37 @@ HTML {
   width: 100vw;
   background-color: #1a2b6d;
 }
+@media(max-width:480px){
+  html{
+    font-size: 14px;
+  }
+  .firstSection {
+    height: 335vh !important;
+  }
+  .itConsultingParent{
+    height: 40vh;
+  }
+  .itConsultingChild h2, .serviceHeader h2, .moreParentDiv h2{
+    font-size: 2rem;
+  }
+  .cardContainer {
+    
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+}
+
 @media (max-width: 600px) {
   .firstSection {
-    height: 380vh;
+    height: 410vh;
   }
   .itConsultingChild {
     width: 100%;
     right: 0;
     bottom: 0;
+  }
+  .itConsultingChild h2, .serviceHeader h2, .moreParentDiv h2{
+    font-size: 2rem;
   }
   .insideChild {
     display: block;
@@ -188,13 +223,15 @@ HTML {
   }
   .serviceHeader p {
     padding: 1rem;
+    
   }
   .cards {
     flex-direction: column;
+    margin-top: 6rem;
   }
   .cardContainer {
     width: 100%;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
   }
   .perCard {
     position: static;
@@ -209,6 +246,10 @@ HTML {
   }
   .moreParentDiv h2 {
     text-align: left;
-    padding: 1rem;
+    /* padding: 1rem; */
   }
+}
+
+@media (max-width: 768px){
+
 }
