@@ -13,9 +13,19 @@ import { Link } from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles(() => ({
+  drawer:{
+    '& .MuiDrawer-paperAnchorLeft':{
+      width:'80%'
+    },
+    '& .MuiDrawer-paper':{
+      backgroundColor: "#1a2b6d",
+      padding: "2rem"
+    },
+    
+  },
   link: {
     textDecoration: "none",
-    color: "blue",
+    color: "#ffffff",
     fontSize: "20px",
   },
   icon: {
@@ -28,7 +38,7 @@ function DrawerComponent() {
   const [openDrawer, setOpenDrawer] = useState(false);
   return (
     <>
-      <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
+      <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)} className={classes.drawer} >
         <List>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
