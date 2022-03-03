@@ -5,8 +5,8 @@ import homeClass from "../styling/homePage.module.css";
 function home() {
   return (
     <>
-      <div className={homeClass.landingPage}></div>
-      <section className={homeClass.itConsultingParent}>
+      <div className={homeClass.landingPage} ></div>
+      <section className={homeClass.itConsultingParent} >
         <div className={homeClass.itConsultingChild}>
           <div className="itConsultingDescription">
             <h2>
